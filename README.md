@@ -94,7 +94,13 @@ The taxonomy was applied across 14 production agents spanning:
 - **Infrastructure** — health checks, semantic search, database access
 - **Communication** — Slack integration, email routing
 
-Each agent received a three-tag assessment based on current capability, not aspiration. The gap between current level and target level became the upgrade backlog — prioritized by critical path position, not by how impressive L10 sounds.
+Each agent received a three-tag assessment based on current capability, not aspiration. Real examples from production:
+
+- `Content Publisher: L7 | WIP | GOAL-L8` — runs independently and deploys to the site, but doesn't yet self-heal when the upstream content API returns malformed data. Needs one capability (detect + recover from bad API response) to reach L8.
+- `Compliance Auditor: L6 | MAX | GOAL-L7` — flags violations correctly but requires human review before any action. Ceiling is L6 until automated enforcement action is approved. MAX means: don't upgrade until the governance decision changes.
+- `Budget Monitor: L8 | MAX | GOAL-L8` — monitors daily spend, alerts on threshold breach, self-recovers from API failures. Vacation-ready. MAX means: this is the right level, no upgrade needed.
+
+The gap between current level and target level became the upgrade backlog — prioritized by critical path position, not by how impressive L10 sounds.
 
 ### Maturity Distribution
 

@@ -144,7 +144,7 @@ The same pattern applies to any emerging domain where maturity exists on a spect
 - **Governance:** CEO-COO operating contract with authority tiers
 - **Tracking:** Three-tag convention in living status documents
 
-Part of [HAIOS](https://mrminor-dev.github.io) — a Human-AI Operating System built across 350+ sessions.
+Part of [HAIOS](https://mrminor-dev.github.io) — a Human-AI Operating System in production since October 2024.
 
 ---
 
@@ -156,4 +156,4 @@ MIT
 
 **Jordan Waxman** — [mrminor-dev.github.io](https://mrminor-dev.github.io)
 
-14 years operations leadership. 350+ sessions building human-AI infrastructure. The intersection is the moat.
+14 years operations leadership — building human-AI infrastructure since 2025. The intersection is the moat.

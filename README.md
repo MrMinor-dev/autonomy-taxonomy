@@ -6,11 +6,19 @@
 
 ## The Problem
 
-"How autonomous should this agent be?" has no default answer. There's no CMM for AI agents. No NIST framework for agentic maturity. When you're building autonomous systems and someone asks "is it ready to run on its own?" — you need more than a gut feeling.
+Not every process needs an AI agent. Some workflows run better as pure automation — deterministic, predictable, no intelligence required. The question isn't "should this be AI?" It's "where does this sit on the spectrum, and where should it go?"
 
-The real problem isn't measuring autonomy. It's defining what "ready" means at each level, what's required to move to the next, and what failure modes exist at each tier. Without that, every conversation about agent readiness devolves into opinion. "I think it's fine" vs. "I think it needs more testing" with no shared vocabulary and no resolution criteria.
+With 14 production workflows spanning financial operations, compliance, content, and infrastructure, I needed a shared vocabulary for that question. "Autonomous" wasn't enough — every n8n workflow was technically autonomous. But a scheduled data import and a self-healing content pipeline are completely different things, and treating them the same made prioritization impossible.
 
-This taxonomy was built out of necessity. With 14 agents in production across financial operations, compliance monitoring, content deployment, and health checks — each at a different maturity level — the question wasn't theoretical. It was operational: which agents can I leave alone for a month, which ones need daily supervision, and how do I systematically move agents from one category to the other?
+The taxonomy gave every workflow a position on the maturity curve, a ceiling if it was already at the right level, and an explicit upgrade path if it wasn't. Some agents were built to stay at L6 — supervised, deterministic, human reviews the output. Others were on a path to L8: vacation-ready, self-healing, no intervention required. The 4-month vacation target wasn't a fear of what would break. It was the definition of "done."
+
+---
+
+## Repository Contents
+
+| File | What It Is |
+|------|------------|
+| [examples/agent-assessment.md](examples/agent-assessment.md) | Full three-tag assessment of all 14 production workflows — current level, ceiling, target, and gap to next level |
 
 ---
 

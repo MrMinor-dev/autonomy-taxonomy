@@ -1,16 +1,16 @@
-# Autonomy Taxonomy
+# Autonomy Taxonomy Framework
 
-**A 10-level framework for classifying autonomous agent maturity — from fully manual (L1) to fully autonomous (L10), with explicit upgrade paths, three-tag tracking, and a concrete definition of "vacation-ready."**
+**A 10-level framework for classifying autonomous workflow maturity — from fully manual (L1) to fully autonomous (L10), with explicit upgrade paths, three-tag tracking, and a concrete definition of "vacation-ready."**
 
 ---
 
 ## The Problem
 
-Not every process needs an AI agent. Some workflows run better as pure automation — deterministic, predictable, no intelligence required. The question isn't "should this be AI?" It's "where does this sit on the spectrum, and where should it go?"
+Not every process needs an intelligent workflow. Some run better as pure automation — deterministic, predictable, no intelligence required. The question isn't "should this be AI?" It's "where does this sit on the spectrum, and where should it go?"
 
 With 14 production workflows spanning financial operations, compliance, content, and infrastructure, I needed a shared vocabulary for that question. "Autonomous" wasn't enough — every n8n workflow was technically autonomous. But a scheduled data import and a self-healing content pipeline are completely different things, and treating them the same made prioritization impossible.
 
-The taxonomy gave every workflow a position on the maturity curve, a ceiling if it was already at the right level, and an explicit upgrade path if it wasn't. Some agents were built to stay at L6 — supervised, deterministic, human reviews the output. Others were on a path to L8: vacation-ready, self-healing, no intervention required. The 4-month vacation target wasn't a fear of what would break. It was the definition of "done."
+The taxonomy gave every workflow a position on the maturity curve, a ceiling if it was already at the right level, and an explicit upgrade path if it wasn't. Some workflows were built to stay at L6 — supervised, deterministic, human reviews the output. Others were on a path to L8: vacation-ready, self-healing, no intervention required. The 4-month vacation target wasn't a fear of what would break. It was the definition of "done."
 
 ---
 
@@ -92,9 +92,9 @@ The taxonomy's real value isn't ranking agents. It's identifying which agents si
 
 ## Application
 
-### 14 Agents Tagged
+## 14 Workflows Tagged
 
-The taxonomy was applied across 14 production agents spanning:
+The taxonomy was applied across 14 production workflows spanning:
 
 - **Financial operations** — budget monitoring, expense tracking, revenue import
 - **Compliance** — prohibited content enforcement, spot audits
@@ -102,7 +102,7 @@ The taxonomy was applied across 14 production agents spanning:
 - **Infrastructure** — health checks, semantic search, database access
 - **Communication** — Slack integration, email routing
 
-Each agent received a three-tag assessment based on current capability, not aspiration. Real examples from production:
+Each workflow received a three-tag assessment based on current capability, not aspiration. Real examples from production:
 
 - `Content Publisher: L7 | WIP | GOAL-L8` — runs independently and deploys to the site, but doesn't yet self-heal when the upstream content API returns malformed data. Needs one capability (detect + recover from bad API response) to reach L8.
 - `Compliance Auditor: L6 | MAX | GOAL-L7` — flags violations correctly but requires human review before any action. Ceiling is L6 until automated enforcement action is approved. MAX means: don't upgrade until the governance decision changes.
@@ -114,12 +114,12 @@ The gap between current level and target level became the upgrade backlog — pr
 
 The distribution revealed the system's actual state vs. its perceived state:
 
-- **Manual tier (L1-3):** Agents requiring human involvement every run
-- **Supervised tier (L4-6):** Agents that run but need human review
-- **Autonomous tier (L7-9):** Agents that run, monitor, and self-heal
-- **Full autonomy (L10):** No agents — and that's by design
+- **Manual tier (L1-3):** Workflows requiring human involvement every run
+- **Supervised tier (L4-6):** Workflows that run but need human review
+- **Autonomous tier (L7-9):** Workflows that run, monitor, and self-heal
+- **Full autonomy (L10):** No workflows — and that's by design
 
-No agent reached L10 because L10 requires self-improvement, which requires a level of architectural sophistication beyond what any single agent needs. The system's autonomy comes from the *composition* of L6-L8 agents, not from any individual agent reaching L10.
+No workflow reached L10 because L10 requires self-improvement, which requires a level of architectural sophistication beyond what any single workflow needs. The system's autonomy comes from the *composition* of L6-L8 workflows, not from any individual workflow reaching L10.
 
 ---
 
@@ -129,7 +129,7 @@ No agent reached L10 because L10 requires self-improvement, which requires a lev
 |--------|-------|
 | Autonomy levels defined | 10 |
 | Capability tiers | 4 (Manual, Supervised, Autonomous + Monitoring, Full Autonomy) |
-| Agents tagged | 14 |
+| Workflows tagged | 14 |
 | Tracking convention | Three-tag (current / status / target) |
 | Vacation-ready threshold | L8+ (4-week unattended operation) |
 | Upgrade paths documented | 6 explicit transitions with requirements |
@@ -148,7 +148,7 @@ The same pattern applies to any emerging domain where maturity exists on a spect
 ## Built With
 
 - **Framework:** Custom maturity model design
-- **Application:** 14 production n8n workflow agents
+- **Application:** 14 production n8n workflows
 - **Governance:** CEO-COO operating contract with authority tiers
 - **Tracking:** Three-tag convention in living status documents
 
